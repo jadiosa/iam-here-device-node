@@ -1,0 +1,19 @@
+{
+  "name": "iam-here-device-node",
+  "version": "1.0.0",
+  "description": "Device control for \"I am here\" and \"SafeBike\" projects. #SWMED",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadiosa/iam-here-device-node.git"
+  },
+  "author": "SWMED Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jadiosa/iam-here-device-node/issues"
+  },
+  "homepage": "https://github.com/jadiosa/iam-here-device-node#readme"
+}
