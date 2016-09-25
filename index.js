@@ -63,8 +63,15 @@ function trigger_alarm(){
 
   // Json Object sended to Backend API
   var notification = {
-    article_id: "1",
-    motion: "true"
+  	messages: [
+	  	{
+		    article_id: "1",
+		    motion: "true",
+		    latitud: "84.4",
+		    longitud: "5.4",
+		    radius: "0"
+	    }
+    ]
   };
 
   // Sending data to Backed API
@@ -75,11 +82,13 @@ function trigger_alarm(){
 
       // Json Object sended to Backend API
       var user = {
+      	//phone: response.body.article.phone
         phone: "+573168120372",
-        article_name: response.body.article.name
+        //article_name: response.body.article.name
+        article_name: "Zanahoria"
       };
-      console.log(response.body);
-      //send_sms(user);
+      //console.log(response.body);
+      send_sms(user);
   });
 }
 
@@ -104,7 +113,7 @@ function send_sms(user){
   client_twilio.messages.create({
     body: '***BiciCare*** te notifica, tu ' 
           + user.article_name
-          + ' está en Movimiento. Ingresa de' 
+          + ' está en movimiento. Ingresa de' 
           + ' inmediato a nuestra aplicación para monitorear.',
     to: user.phone,
     from: '+14794312469' 
