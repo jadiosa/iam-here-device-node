@@ -2,7 +2,7 @@
   "name": "iam-here-device-node",
   "version": "1.0.0",
   "description": "Device control for \"I am here\" and \"SafeBike\" projects. #SWMED",
-  "main": "index.js",
+  "main": "motion.js",
   "scripts": {
     "test": "mocha test"
   },
@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/jadiosa/iam-here-device-node#readme",
   "dependencies": {
-    "johnny-five": "^0.10.0"
+    "j5-songs": "0.0.9",
+    "johnny-five": "^0.10.0",
+    "twilio": "^2.11.0",
+    "unirest": "^0.5.1"
   }
 }
